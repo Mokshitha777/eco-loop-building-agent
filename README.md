@@ -210,13 +210,3 @@ Some possible future enhancements include:
 - Mobile application support
 
 ---
-
-# 👨‍💻 Team
-
-Developed as part of the **Honeywell Smart Building AI Hackathon**.
-
----
-
-# 📄 License
-
-This project was developed for educational and hackathon purposes.
