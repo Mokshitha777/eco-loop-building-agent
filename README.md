@@ -1,61 +1,77 @@
-# Eco Loop Building AI
+# 🏢 Eco Loop Building AI
 
-## Overview
+<img width="1919" height="774" alt="image" src="https://github.com/user-attachments/assets/cc37a41b-f373-4b4a-865d-66333c2a34b0" />
+<img width="1901" height="693" alt="image" src="https://github.com/user-attachments/assets/b193c95e-6cb9-4621-bb2e-eea02069d036" />
+<img width="1919" height="470" alt="image" src="https://github.com/user-attachments/assets/e1c65850-9b14-4a93-8c4a-2aa9a611cd4d" />
 
-Eco Loop Building AI is a smart building energy management system developed for the Honeywell Hackathon.
+An AI-powered Smart Building Management System developed for the **Honeywell Smart Building Hackathon**.
 
-The project combines EnergyPlus building simulation with a locally running Large Language Model (Gemma 3 using Ollama) to monitor building conditions, analyse sensor data, and recommend energy-saving actions in real time.
-
-The dashboard refreshes automatically every few seconds and displays live sensor values, AI decisions, building health, and EnergyPlus simulation results.
-
----
-
-## Features
-
-- EnergyPlus building simulation
-- Live building sensor monitoring
-- AI-based building analysis using Gemma 3
-- Rule-based control decisions
-- Building health score
-- Energy saving estimation
-- Automatic dashboard refresh
-- Interactive AI assistant for building-related questions
+The project combines **EnergyPlus**, **Python**, **Streamlit**, and a locally running **Gemma 3 Large Language Model (LLM)** through Ollama to monitor building conditions, analyse energy usage, and recommend energy-efficient actions.
 
 ---
 
-## Technologies Used
+# 📌 Overview
 
-- Python
-- Streamlit
-- EnergyPlus
-- Ollama
-- Gemma 3 (1B)
-- Pandas
+Buildings consume a significant amount of energy every day. Traditional Building Management Systems often rely on fixed rules and cannot intelligently adapt to changing conditions.
+
+Eco Loop Building AI demonstrates how Artificial Intelligence can assist in analysing building data and recommending energy-saving actions while maintaining a comfortable indoor environment.
+
+The project integrates building simulation, live sensor monitoring, AI-based analysis, and an interactive dashboard into a single application.
 
 ---
 
-## Project Structure
+# 🚀 Features
 
-```
+- 🏢 EnergyPlus building simulation
+- 📊 Live sensor monitoring
+- 🤖 AI-powered building analysis using Gemma 3
+- ⚡ Intelligent energy-saving recommendations
+- 🌡 Temperature and humidity monitoring
+- 👥 Occupancy detection
+- 🌬 CO₂ level monitoring
+- 🚨 Automatic building alerts
+- 💚 Building Health Score
+- 💬 AI Chat Assistant
+- 🔄 Auto-refreshing dashboard
+
+---
+
+# 🛠 Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Backend development |
+| Streamlit | Dashboard |
+| EnergyPlus | Building energy simulation |
+| Ollama | Running local LLM |
+| Gemma 3 (1B) | AI building analysis |
+| Pandas | Data processing |
+
+---
+
+# 📂 Project Structure
+
+```text
 eco-loop-building-agent/
 
+│
 ├── ai/
 │   ├── agent.py
 │   └── llm.py
-
+│
 ├── dashboard/
 │   └── app.py
-
+│
 ├── energyplus/
 │   ├── parser.py
-│   ├── output/
-│   └── simulation files
-
+│   ├── run_simulation.py
+│   └── output/
+│
 ├── simulator/
 │   └── simulator.py
-
+│
 ├── utils/
-
+│
 ├── main.py
 ├── requirements.txt
 └── README.md
@@ -63,54 +79,144 @@ eco-loop-building-agent/
 
 ---
 
-## How It Works
+# ⚙️ How the Project Works
 
-1. EnergyPlus simulates the building.
-2. Sensor values are generated for temperature, humidity, occupancy, energy usage and CO₂.
-3. The AI agent analyses these values.
-4. Control decisions such as increasing ventilation or enabling energy-saving mode are generated.
-5. The dashboard displays the simulation results, alerts, AI decisions and overall building health.
+### Step 1 – Building Simulation
 
----
+EnergyPlus simulates the building and generates energy consumption data.
 
-## AI Decisions
+↓
 
-The AI recommends actions such as:
+### Step 2 – Sensor Monitoring
+
+The simulator provides live values for:
+
+- Temperature
+- Humidity
+- Occupancy
+- Energy Consumption
+- CO₂ Level
+
+↓
+
+### Step 3 – AI Decision Engine
+
+The AI agent analyses the sensor data and generates intelligent recommendations such as:
 
 - Enable Energy Saving Mode
 - Increase Ventilation
 - Turn ON Air Conditioning
 - Turn OFF Air Conditioning
-- Turn OFF Lights (when no occupancy)
+- Turn OFF Lights when rooms are empty
 
-These decisions are generated automatically based on the current building conditions.
+↓
+
+### Step 4 – AI Analysis
+
+Gemma 3 analyses the building conditions and provides:
+
+- Building health summary
+- Energy efficiency observations
+- Comfort analysis
+- Energy-saving recommendations
+
+↓
+
+### Step 5 – Dashboard
+
+The Streamlit dashboard displays all information in real time.
 
 ---
 
-## Dashboard
+# 📊 Dashboard Includes
 
-The Streamlit dashboard includes:
-
-- EnergyPlus simulation results
-- Live sensor data
-- Building alerts
-- AI control decisions
-- Building health score
-- AI analysis
-- Chat interface to ask building-related questions
+- Total Site Energy
+- Baseline Energy
+- Estimated Optimised Energy
+- Estimated Energy Savings
+- Live Sensor Data
+- Building Alerts
+- AI Control Decisions
+- Building Health Score
+- AI Building Analysis
+- AI Chat Assistant
 
 ---
 
-## Future Improvements
+# 🤖 AI Features
 
-- Real-time IoT sensor integration
-- Historical data storage and trend analysis
-- Automatic control updates to EnergyPlus
+The project uses **Gemma 3**, running locally through **Ollama**, to analyse building conditions.
+
+The AI can:
+
+- Analyse sensor readings
+- Explain building status
+- Recommend energy-saving actions
+- Provide natural language responses
+- Answer building-related questions
+
+---
+
+# ▶️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Mokshitha777/eco-loop-building-agent.git
+```
+
+Move into the project
+
+```bash
+cd eco-loop-building-agent
+```
+
+Install the required packages
+
+```bash
+pip install -r requirements.txt
+```
+
+Make sure EnergyPlus and Ollama are installed on your system.
+
+---
+
+# ▶️ Running the Project
+
+Run the main application
+
+```bash
+python main.py
+```
+
+Launch the dashboard
+
+```bash
+streamlit run dashboard/app.py
+```
+
+---
+
+# 📈 Future Improvements
+
+Some possible future enhancements include:
+
+- Integration with real IoT sensors
+- Historical data storage
+- Energy usage graphs
 - Predictive energy forecasting
+- Automatic EnergyPlus control updates
 - Cloud deployment
+- Mobile application support
 
 ---
 
-## Team
+# 👨‍💻 Team
 
-Developed for the Honeywell Smart Building AI Hackathon.
+Developed as part of the **Honeywell Smart Building AI Hackathon**.
+
+---
+
+# 📄 License
+
+This project was developed for educational and hackathon purposes.
